@@ -2,6 +2,7 @@ package com.example.SpringBoot.load;
 
 import com.example.SpringBoot.model.Data;
 import com.example.SpringBoot.model.Repository.DataRepository;
+import io.searchbox.client.JestClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.stereotype.Component;
@@ -20,9 +21,13 @@ public class ElasticLoad {
     @Autowired
     DataRepository dataRepository;
 
+    @Autowired
+    JestClient jestClient;
+
     @PostConstruct
     @Transactional
     public void loadAll(){
+
         operations.putMapping(Data.class);
         System.out.println("Loading Data");
         dataRepository.saveAll(getData());
@@ -32,6 +37,7 @@ public class ElasticLoad {
 
     private List<Data> getData() {
         List<Data> datas = new ArrayList<>();
+        datas.add(new Data("01516c15-aa7fcd-49bc-9b68-dbd218de8050","41275","26426834.0","15","0.25","0.0","4.1","4502.0","None","1272.0","False","hotel_details_page","23213.0","4966.0","1455.0","0.0","0.0","0.0"));
         datas.add(new Data("01516c15-7fcd-49bc-9b68-dbd218de8050","41275","26426834.0","15","0.25","0.0","4.1","4502.0","None","1272.0","False","hotel_details_page","23213.0","4966.0","1455.0","0.0","0.0","0.0"));
         datas.add(new Data("01516c15-7fcd-49bc-9b68-dbd218de8050","41275","26426834.0","15","0.25","0.0","4.1","4502.0","None","1272.0","False","hotel_details_page","23213.0","4966.0","1455.0","0.0","0.0","0.0"));
         datas.add(new Data("01516c15-7fcd-49bc-9b68-dbd218de8050","41275","26426834.0","15","0.25","0.0","4.1","4502.0","None","1272.0","False","hotel_impression","23213.0","4966.0","1455.0","0.0","0.0","0.0"));

@@ -7,3 +7,7 @@ redis-server
 
 Run flask api:
 python3 app.py
+
+To kill redis server:
+ps -ef |grep redis
+kill -9 "server id"

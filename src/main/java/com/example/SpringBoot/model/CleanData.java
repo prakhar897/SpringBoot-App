@@ -19,4 +19,24 @@ public class CleanData {
     public double userCTR;
     public double distanceFlag;
 
+    @Override
+    public String toString() {
+        return "CleanData{" +
+                "requestId='" + requestId + '\'' +
+                ", hotelId=" + hotelId +
+                ", hotelrank=" + hotelrank +
+                ", rawDelight=" + rawDelight +
+                ", rawRecommendedHotel=" + rawRecommendedHotel +
+                ", distance=" + distance +
+                ", fPrice=" + fPrice +
+                ", shortlisted=" + shortlisted +
+                ", event=" + event +
+                ", hotelBR=" + hotelBR +
+                ", hotelCTR=" + hotelCTR +
+                ", hotelBTOD=" + hotelBTOD +
+                ", userBR=" + userBR +
+                ", userCTR=" + userCTR +
+                ", distanceFlag=" + distanceFlag +
+                '}';
+    }
 }

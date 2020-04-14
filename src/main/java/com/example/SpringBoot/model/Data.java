@@ -1,12 +1,10 @@
 package com.example.SpringBoot.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.redis.core.RedisHash;
 
-@Document(indexName="hoteldata",type="Data")
+@Document(indexName = "hoteldata", type = "Data")
 public class Data {
 
     @JsonProperty("requestId")
