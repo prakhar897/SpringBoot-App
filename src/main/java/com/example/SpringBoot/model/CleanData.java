@@ -18,6 +18,7 @@ public class CleanData {
     public double userBR;
     public double userCTR;
     public double distanceFlag;
+    public int FakeFeature;
 
     @Override
     public String toString() {
@@ -37,6 +38,7 @@ public class CleanData {
                 ", userBR=" + userBR +
                 ", userCTR=" + userCTR +
                 ", distanceFlag=" + distanceFlag +
+                ", FakeFeature=" + FakeFeature +
                 '}';
     }
 }
